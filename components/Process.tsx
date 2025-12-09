@@ -35,9 +35,8 @@ export const Process: React.FC = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* 
-            FIX: Removed 'sticky' from mobile/tablet views (default). 
-            Added 'lg:sticky' so it only sticks on large screens. 
-            Added 'mb-12' for spacing on mobile.
+            FIX: Removed sticky from mobile/tablet to prevent overlapping content.
+            Added lg:sticky for desktop only.
           */}
           <div className="relative lg:sticky lg:top-32 lg:self-start mb-12 lg:mb-0">
             <Reveal>
@@ -63,7 +62,8 @@ export const Process: React.FC = () => {
               {steps.map((step, index) => {
                 const Icon = icons[index];
                 return (
-                  <Reveal key={step.number} delay={index * 0.15} direction="up">
+                  // Added p-4 to Reveal to prevent clipping of the icon when it scales up
+                  <Reveal key={step.number} delay={index * 0.15} direction="up" className="p-4 -m-4">
                     <div className="relative flex flex-col md:flex-row gap-6 md:gap-8 items-start group">
                       
                       {/* Icon Container */}
