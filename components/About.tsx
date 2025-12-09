@@ -57,14 +57,14 @@ export const About: React.FC = () => {
             <Reveal direction="right" delay={0.2}>
                <div className="grid grid-cols-2 gap-4">
                   <img 
-                    src="https://images.unsplash.com/photo-1493836512294-502baa1986e2?q=80&w=400&auto=format&fit=crop" 
-                    alt="Consultório Ambiente" 
-                    className="rounded-3xl w-full h-72 object-cover transform translate-y-12 shadow-2xl"
+                    src="https://drive.google.com/uc?export=view&id=16k8boZOesQQJ-urQr_2jptkkWgobcQPc" 
+                    alt="Jumarina Coelho" 
+                    className="rounded-3xl w-full h-80 object-cover transform translate-y-12 shadow-2xl border-4 border-white"
                   />
                   <img 
-                    src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?q=80&w=400&auto=format&fit=crop" 
-                    alt="Detalhes Acolhedores" 
-                    className="rounded-3xl w-full h-72 object-cover shadow-2xl"
+                    src="https://drive.google.com/uc?export=view&id=1nMDYoIXNVXRPuds39sHG4gQ393yO6PBf" 
+                    alt="Detalhes" 
+                    className="rounded-3xl w-full h-80 object-cover shadow-2xl border-4 border-white"
                   />
                </div>
                {/* Decorative Quote */}

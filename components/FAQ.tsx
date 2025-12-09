@@ -34,10 +34,10 @@ export const FAQ: React.FC = () => {
   };
 
   return (
-    <section id="faq" className="py-32 bg-cream text-primary rounded-t-[3rem] lg:rounded-t-[5rem] -mt-20 z-50 relative">
-      <div className="max-w-3xl mx-auto px-6">
+    <section id="faq" className="py-40 bg-cream text-primary rounded-t-[3rem] lg:rounded-t-[5rem] -mt-20 z-50 relative">
+      <div className="max-w-4xl mx-auto px-6">
         <Reveal width="100%">
-          <h2 className="font-serif text-4xl md:text-5xl text-center font-bold mb-16">
+          <h2 className="font-serif text-5xl md:text-6xl text-center font-bold mb-20">
             Perguntas Frequentes
           </h2>
         </Reveal>
@@ -45,24 +45,24 @@ export const FAQ: React.FC = () => {
         <div className="space-y-6">
           {faqs.map((faq, index) => (
             <Reveal key={index} delay={index * 0.1}>
-              <div className={`bg-white rounded-2xl border transition-all duration-300 ${openIndex === index ? 'border-secondary shadow-lg scale-[1.02]' : 'border-secondary/10 shadow-sm hover:shadow-md'}`}>
+              <div className={`bg-white rounded-3xl border transition-all duration-300 ${openIndex === index ? 'border-secondary shadow-lg scale-[1.01]' : 'border-secondary/10 shadow-sm hover:shadow-md'}`}>
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full flex items-center justify-between p-6 text-left"
+                  className="w-full flex items-center justify-between p-8 text-left"
                 >
-                  <span className={`font-serif text-xl font-medium ${openIndex === index ? 'text-secondary' : 'text-primary'}`}>
+                  <span className={`font-serif text-2xl md:text-3xl font-medium ${openIndex === index ? 'text-secondary' : 'text-primary'}`}>
                     {faq.question}
                   </span>
-                  <span className={`transition-transform duration-300 bg-surface/5 p-2 rounded-full ${openIndex === index ? 'rotate-180 text-secondary bg-secondary/10' : 'text-primary/40'}`}>
-                    {openIndex === index ? <Minus size={20} /> : <Plus size={20} />}
+                  <span className={`transition-transform duration-300 bg-surface/5 p-3 rounded-full flex-shrink-0 ml-4 ${openIndex === index ? 'rotate-180 text-secondary bg-secondary/10' : 'text-primary/40'}`}>
+                    {openIndex === index ? <Minus size={24} /> : <Plus size={24} />}
                   </span>
                 </button>
                 <div 
-                  className={`px-6 transition-all duration-300 ease-in-out overflow-hidden ${
-                    openIndex === index ? 'max-h-48 pb-6 opacity-100' : 'max-h-0 opacity-0'
+                  className={`px-8 transition-all duration-300 ease-in-out overflow-hidden ${
+                    openIndex === index ? 'max-h-96 pb-8 opacity-100' : 'max-h-0 opacity-0'
                   }`}
                 >
-                  <p className="text-primary/70 text-lg leading-relaxed border-t border-stone-100 pt-4">
+                  <p className="text-primary/70 text-xl leading-relaxed border-t border-stone-100 pt-6">
                     {faq.answer}
                   </p>
                 </div>
