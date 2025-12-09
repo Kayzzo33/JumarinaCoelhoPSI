@@ -23,7 +23,7 @@ const testimonials: Testimonial[] = [
 
 export const Testimonials: React.FC = () => {
   return (
-    <section className="py-32 bg-surface text-cream rounded-t-[3rem] lg:rounded-t-[5rem] -mt-20 z-40 relative">
+    <section className="py-24 lg:py-32 bg-surface text-cream rounded-t-[2.5rem] lg:rounded-t-[5rem] -mt-8 md:-mt-20 z-40 relative">
       <div className="max-w-7xl mx-auto px-6">
         <Reveal width="100%">
           <h2 className="font-serif text-4xl md:text-5xl text-center mb-16">

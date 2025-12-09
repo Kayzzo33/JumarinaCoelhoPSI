@@ -1,7 +1,6 @@
 import React from 'react';
 import { Reveal } from './Reveal';
-import { ServiceItem } from '../types';
-import { Brain, HeartHandshake, Sparkles, Anchor, Smile, Activity, ArrowUpRight } from 'lucide-react';
+import { Brain, HeartHandshake, Sparkles, Anchor, Smile, Activity } from 'lucide-react';
 import { GlowingEffect } from './ui/GlowingEffect';
 import { cn } from '../lib/utils';
 
@@ -14,7 +13,7 @@ interface GridItemProps {
 
 const GridItem = ({ area, icon, title, description }: GridItemProps) => {
   return (
-    <li className={cn("min-h-[14rem] list-none relative", area)}>
+    <li className={cn("min-h-[14rem] list-none relative overflow-hidden rounded-[1.5rem]", area)}>
       <div className="relative h-full rounded-[1.25rem] border-[0.75px] border-white/10 p-2 md:rounded-[1.5rem] md:p-3">
         <GlowingEffect
           spread={40}
@@ -46,7 +45,7 @@ const GridItem = ({ area, icon, title, description }: GridItemProps) => {
 
 export const Services: React.FC = () => {
   return (
-    <section id="especialidades" className="py-40 bg-primary text-cream rounded-t-[3rem] lg:rounded-t-[5rem] -mt-20 z-30 relative overflow-hidden">
+    <section id="especialidades" className="py-24 lg:py-40 bg-primary text-cream rounded-t-[2.5rem] lg:rounded-t-[5rem] -mt-8 md:-mt-20 z-30 relative overflow-hidden scroll-mt-24">
       
       {/* Background patterns */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-[120px] pointer-events-none" />

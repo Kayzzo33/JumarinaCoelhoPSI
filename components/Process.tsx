@@ -30,7 +30,7 @@ const icons = [MessageCircle, CalendarCheck, Map, Footprints];
 
 export const Process: React.FC = () => {
   return (
-    <section id="processo" className="py-32 bg-cream text-primary rounded-t-[3rem] lg:rounded-t-[5rem] -mt-20 z-40 relative">
+    <section id="processo" className="py-24 lg:py-32 bg-cream text-primary rounded-t-[2.5rem] lg:rounded-t-[5rem] -mt-8 md:-mt-20 z-40 relative scroll-mt-24">
       <div className="max-w-7xl mx-auto px-6">
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -54,21 +54,22 @@ export const Process: React.FC = () => {
             {/* Vertical Line */}
             <div className="absolute left-8 top-8 bottom-8 w-0.5 bg-secondary/20 hidden md:block"></div>
 
-            <div className="space-y-16">
+            <div className="space-y-12 md:space-y-16">
               {steps.map((step, index) => {
                 const Icon = icons[index];
                 return (
                   <Reveal key={step.number} delay={index * 0.15} direction="left">
-                    <div className="relative flex flex-col md:flex-row gap-8 items-start group">
+                    <div className="relative flex flex-col md:flex-row gap-6 md:gap-8 items-start group">
                       <div className="flex-shrink-0 w-16 h-16 rounded-full bg-white border-2 border-secondary/20 flex items-center justify-center text-secondary relative z-10 shadow-sm group-hover:border-secondary transition-colors group-hover:scale-110 duration-300">
                         <Icon size={24} />
                       </div>
                       <div className="flex-1 pt-2">
-                        <span className="text-7xl font-serif text-secondary/10 absolute -top-10 right-0 pointer-events-none select-none">
+                        {/* Number Positioning optimized for mobile */}
+                        <span className="text-6xl md:text-7xl font-serif text-secondary/10 block mb-2 md:absolute md:-top-10 md:right-0 pointer-events-none select-none">
                           {step.number}
                         </span>
-                        <h3 className="font-serif text-3xl font-bold mb-4">{step.title}</h3>
-                        <p className="text-primary/70 text-lg leading-relaxed">{step.description}</p>
+                        <h3 className="font-serif text-3xl font-bold mb-4 relative z-10">{step.title}</h3>
+                        <p className="text-primary/70 text-lg leading-relaxed relative z-10">{step.description}</p>
                       </div>
                     </div>
                   </Reveal>

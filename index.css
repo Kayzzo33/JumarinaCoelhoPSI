@@ -5,6 +5,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 6rem; /* Ensures links don't get hidden behind the floating navbar */
   }
   body {
     @apply bg-primary text-slate-800 font-sans antialiased selection:bg-secondary selection:text-white;

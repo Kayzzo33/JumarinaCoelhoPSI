@@ -34,7 +34,7 @@ export const FAQ: React.FC = () => {
   };
 
   return (
-    <section id="faq" className="py-40 bg-cream text-primary rounded-t-[3rem] lg:rounded-t-[5rem] -mt-20 z-50 relative">
+    <section id="faq" className="py-24 lg:py-40 bg-cream text-primary rounded-t-[2.5rem] lg:rounded-t-[5rem] -mt-8 md:-mt-20 z-50 relative scroll-mt-24">
       <div className="max-w-4xl mx-auto px-6">
         <Reveal width="100%">
           <h2 className="font-serif text-5xl md:text-6xl text-center font-bold mb-20">

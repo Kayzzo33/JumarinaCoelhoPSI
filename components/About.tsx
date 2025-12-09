@@ -1,10 +1,10 @@
 import React from 'react';
 import { Reveal } from './Reveal';
-import { GraduationCap, Heart, BookOpen, Award } from 'lucide-react';
+import { GraduationCap, Heart, BookOpen } from 'lucide-react';
 
 export const About: React.FC = () => {
   return (
-    <section id="sobre" className="relative py-32 bg-cream text-primary rounded-t-[3rem] lg:rounded-t-[5rem] -mt-16 z-20">
+    <section id="sobre" className="relative py-24 lg:py-32 bg-cream text-primary rounded-t-[2.5rem] lg:rounded-t-[5rem] -mt-8 md:-mt-16 z-20 scroll-mt-24">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
@@ -66,7 +66,7 @@ export const About: React.FC = () => {
                       alt="Jumarina Coelho" 
                       className="rounded-3xl w-full h-64 lg:h-80 object-cover shadow-xl border-4 border-white"
                     />
-                    {/* Moved Quote Card Here to avoid overlapping section bounds */}
+                    {/* Quote Card */}
                     <div className="bg-surface p-6 rounded-3xl shadow-xl border-l-4 border-secondary">
                        <BookOpen className="text-secondary mb-3" size={24} />
                        <p className="text-cream text-sm md:text-base italic font-serif leading-relaxed">

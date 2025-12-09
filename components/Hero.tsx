@@ -4,7 +4,7 @@ import { Reveal } from './Reveal';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-[100dvh] flex items-center bg-primary overflow-hidden pt-24 pb-12 lg:pt-0 lg:pb-0">
+    <section className="relative min-h-[100dvh] flex items-center bg-primary overflow-hidden pt-28 pb-12 lg:pt-0 lg:pb-0">
       
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-[#163a50] to-primary animate-gradient-x opacity-80" />
@@ -17,7 +17,7 @@ export const Hero: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         
         {/* Text Content */}
-        <div className="lg:col-span-7 space-y-6 lg:space-y-8 order-2 lg:order-1 pt-4 lg:pt-0">
+        <div className="lg:col-span-7 space-y-6 lg:space-y-8 order-2 lg:order-1">
           <Reveal>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm shadow-lg">
               <Star size={14} className="text-secondary fill-secondary" />
@@ -61,8 +61,8 @@ export const Hero: React.FC = () => {
         </div>
 
         {/* Image/Visual Layer - Optimized for Mobile visibility */}
-        <div className="lg:col-span-5 relative order-1 lg:order-2 flex justify-center lg:justify-end">
-          <Reveal direction="left" delay={0.4} className="relative w-48 sm:w-64 md:w-80 lg:w-full lg:max-w-md aspect-[3/4]">
+        <div className="lg:col-span-5 relative order-1 lg:order-2 flex justify-center lg:justify-end mb-4 lg:mb-0">
+          <Reveal direction="left" delay={0.4} className="relative w-56 sm:w-64 md:w-80 lg:w-full lg:max-w-md aspect-[3/4]">
              {/* Main Image Frame */}
              <div className="absolute inset-0 bg-secondary/20 rounded-t-[50px] lg:rounded-t-[100px] rounded-b-[20px] lg:rounded-b-[40px] rotate-3 transform translate-x-2 lg:translate-x-4 translate-y-2 lg:translate-y-4"></div>
              <div className="relative h-full w-full rounded-t-[50px] lg:rounded-t-[100px] rounded-b-[20px] lg:rounded-b-[40px] overflow-hidden border-2 border-white/10 shadow-2xl">

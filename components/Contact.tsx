@@ -4,7 +4,7 @@ import { Instagram, Mail, Phone } from 'lucide-react';
 
 export const Contact: React.FC = () => {
   return (
-    <section id="contato" className="py-32 bg-primary text-cream rounded-t-[3rem] lg:rounded-t-[5rem] -mt-20 z-50 relative">
+    <section id="contato" className="py-24 lg:py-32 bg-primary text-cream rounded-t-[2.5rem] lg:rounded-t-[5rem] -mt-8 md:-mt-20 z-50 relative scroll-mt-24">
       <div className="max-w-5xl mx-auto px-6">
         <Reveal width="100%">
           <div className="bg-gradient-to-br from-surface to-slate-900 rounded-[3rem] p-8 md:p-20 text-center border border-white/5 relative overflow-hidden shadow-2xl">
