@@ -67,7 +67,7 @@ export const Hero: React.FC = () => {
              <div className="absolute inset-0 bg-secondary/20 rounded-t-[50px] lg:rounded-t-[100px] rounded-b-[20px] lg:rounded-b-[40px] rotate-3 transform translate-x-2 lg:translate-x-4 translate-y-2 lg:translate-y-4"></div>
              <div className="relative h-full w-full rounded-t-[50px] lg:rounded-t-[100px] rounded-b-[20px] lg:rounded-b-[40px] overflow-hidden border-2 border-white/10 shadow-2xl">
                <img 
-                 src="https://drive.google.com/uc?export=view&id=1AMpIJcljsydk9dUwUhaOe1gTG6Db_Zcx" 
+                 src="https://lh3.googleusercontent.com/d/1AMpIJcljsydk9dUwUhaOe1gTG6Db_Zcx" 
                  alt="Jumarina Coelho Psicóloga" 
                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                />

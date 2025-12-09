@@ -1,7 +1,7 @@
 import React from 'react';
 import { Reveal } from './Reveal';
 import { Testimonial } from '../types';
-import { Quote } from 'lucide-react';
+import { Quote, Star } from 'lucide-react';
 
 const testimonials: Testimonial[] = [
   {
@@ -23,31 +23,43 @@ const testimonials: Testimonial[] = [
 
 export const Testimonials: React.FC = () => {
   return (
-    <section className="py-40 bg-surface text-cream rounded-t-[3rem] lg:rounded-t-[5rem] -mt-20 z-40 relative">
+    <section className="py-32 bg-surface text-cream rounded-t-[3rem] lg:rounded-t-[5rem] -mt-20 z-40 relative">
       <div className="max-w-7xl mx-auto px-6">
         <Reveal width="100%">
-          <h2 className="font-serif text-4xl md:text-5xl text-center mb-20">
+          <h2 className="font-serif text-4xl md:text-5xl text-center mb-16">
             Histórias de <span className="text-secondary italic">transformação</span>
           </h2>
         </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <Reveal key={index} delay={index * 0.1}>
-              <div className="bg-primary/50 p-8 pt-12 rounded-[2rem] border border-white/5 relative h-full hover:bg-primary/70 transition-colors hover:-translate-y-2 duration-300 shadow-xl">
-                {/* Fixed Icon Position */}
-                <div className="absolute -top-6 left-8 bg-secondary text-primary rounded-full p-4 shadow-lg border-4 border-surface">
-                  <Quote size={24} fill="currentColor" />
-                </div>
+              <div className="group bg-primary border border-white/5 rounded-3xl p-8 relative h-full flex flex-col hover:border-secondary/30 transition-all duration-300 hover:-translate-y-1 shadow-xl">
                 
-                <div className="flex flex-col h-full">
-                  <p className="text-cream/90 italic mb-8 leading-relaxed text-lg flex-grow">
-                    "{testimonial.text}"
-                  </p>
-                  <div className="pt-6 border-t border-white/5">
-                    <p className="font-serif font-bold text-xl text-cream text-secondary">{testimonial.author}</p>
-                    <p className="text-sm text-cream/60 uppercase tracking-wider font-medium mt-1">{testimonial.role}</p>
-                  </div>
+                {/* Internal Header with Icon */}
+                <div className="flex justify-between items-start mb-6">
+                   <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-cream transition-colors duration-300">
+                      <Quote size={20} fill="currentColor" />
+                   </div>
+                   <div className="flex gap-1">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <Star key={star} size={14} className="fill-secondary text-secondary" />
+                      ))}
+                   </div>
+                </div>
+
+                <p className="text-cream/80 italic leading-relaxed text-lg mb-8 flex-grow">
+                  "{testimonial.text}"
+                </p>
+
+                <div className="mt-auto border-t border-white/10 pt-4 flex items-center gap-3">
+                   <div className="w-10 h-10 rounded-full bg-gradient-to-br from-secondary to-primary flex items-center justify-center text-white font-serif font-bold">
+                      {testimonial.author.charAt(0)}
+                   </div>
+                   <div>
+                      <p className="font-serif font-bold text-lg text-cream">{testimonial.author}</p>
+                      <p className="text-xs text-cream/50 uppercase tracking-wider font-medium">{testimonial.role}</p>
+                   </div>
                 </div>
               </div>
             </Reveal>
