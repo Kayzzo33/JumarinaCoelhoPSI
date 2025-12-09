@@ -34,7 +34,12 @@ export const Process: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          <div className="sticky top-32 self-start">
+          {/* 
+            FIX: Removed 'sticky' from mobile/tablet views (default). 
+            Added 'lg:sticky' so it only sticks on large screens. 
+            Added 'mb-12' for spacing on mobile.
+          */}
+          <div className="relative lg:sticky lg:top-32 lg:self-start mb-12 lg:mb-0">
             <Reveal>
               <h2 className="font-serif text-5xl md:text-6xl font-bold mb-8">
                 Como funciona a <br/><span className="text-secondary">terapia?</span>
@@ -50,26 +55,35 @@ export const Process: React.FC = () => {
             </Reveal>
           </div>
 
-          <div className="relative pt-8 lg:pt-0">
-            {/* Vertical Line */}
-            <div className="absolute left-8 top-8 bottom-8 w-0.5 bg-secondary/20 hidden md:block"></div>
+          <div className="relative pt-0 lg:pt-0">
+            {/* Vertical Line - Visible on tablet/desktop, animated with gradient */}
+            <div className="absolute left-8 top-4 bottom-0 w-0.5 bg-gradient-to-b from-secondary/80 via-secondary/20 to-transparent hidden md:block"></div>
 
-            <div className="space-y-12 md:space-y-16">
+            <div className="space-y-16 md:space-y-24">
               {steps.map((step, index) => {
                 const Icon = icons[index];
                 return (
-                  <Reveal key={step.number} delay={index * 0.15} direction="left">
+                  <Reveal key={step.number} delay={index * 0.15} direction="up">
                     <div className="relative flex flex-col md:flex-row gap-6 md:gap-8 items-start group">
+                      
+                      {/* Icon Container */}
                       <div className="flex-shrink-0 w-16 h-16 rounded-full bg-white border-2 border-secondary/20 flex items-center justify-center text-secondary relative z-10 shadow-sm group-hover:border-secondary transition-colors group-hover:scale-110 duration-300">
                         <Icon size={24} />
                       </div>
+                      
                       <div className="flex-1 pt-2">
-                        {/* Number Positioning optimized for mobile */}
+                        {/* Number Positioning */}
                         <span className="text-6xl md:text-7xl font-serif text-secondary/10 block mb-2 md:absolute md:-top-10 md:right-0 pointer-events-none select-none">
                           {step.number}
                         </span>
-                        <h3 className="font-serif text-3xl font-bold mb-4 relative z-10">{step.title}</h3>
-                        <p className="text-primary/70 text-lg leading-relaxed relative z-10">{step.description}</p>
+                        
+                        <h3 className="font-serif text-3xl font-bold mb-4 relative z-10 text-primary">
+                          {step.title}
+                        </h3>
+                        
+                        <p className="text-primary/70 text-lg leading-relaxed relative z-10 max-w-lg">
+                          {step.description}
+                        </p>
                       </div>
                     </div>
                   </Reveal>
